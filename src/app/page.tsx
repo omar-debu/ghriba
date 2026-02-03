@@ -19,7 +19,7 @@ export default function Home() {
 
       <main>
         {/* PARALLAX HERO - The Hook */}
-        <section ref={heroRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <section ref={heroRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center px-4 md:px-0">
           {/* Background Layer */}
           <motion.div style={{ scale: heroScale }} className="absolute inset-0 z-0">
             <Image
@@ -38,7 +38,7 @@ export default function Home() {
           {/* Floating Arabic Slogan */}
           <motion.div
             style={{ y: heroTextY }}
-            className="relative z-10 text-center space-y-8"
+            className="relative z-10 text-center space-y-4 md:space-y-8"
           >
             <div className="relative">
               <Image
@@ -46,7 +46,7 @@ export default function Home() {
                 alt="Khat"
                 width={800}
                 height={300}
-                className="mx-auto filter invert drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] opacity-90 relative z-10"
+                className="mx-auto filter invert drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] opacity-90 relative z-10 w-[85vw] sm:w-[70vw] md:w-[800px]"
               />
               {/* Artistic Ink Splatter Behind */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-black/20 blur-3xl rounded-full z-0" />
@@ -56,7 +56,7 @@ export default function Home() {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="font-mega text-3xl md:text-5xl text-[#2C4F3A] tracking-widest backdrop-blur-md inline-block px-8 py-3 transform -rotate-1 border-2 border-[#2C4F3A]/30 bg-[#E7D2A9]/90 shadow-2xl"
+              className="font-mega text-2xl sm:text-3xl md:text-5xl text-[#2C4F3A] tracking-widest backdrop-blur-md inline-block px-6 sm:px-8 py-2 md:py-3 transform -rotate-1 border-2 border-[#2C4F3A]/30 bg-[#E7D2A9]/90 shadow-2xl"
             >
               L'Art de la Dignité
             </motion.h1>
@@ -66,7 +66,7 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 text-[#E7D2A9]"
+            className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-20 text-[#E7D2A9]"
           >
             <span className="font-heading text-xs tracking-[0.3em] uppercase writing-vertical">Scroll</span>
           </motion.div>
@@ -99,16 +99,21 @@ export default function Home() {
         />
 
         {/* INTEGRATION 2: CULTURAL BANNER - Full Width Image After 2 Sections */}
-        <section className="relative w-full py-0 overflow-hidden">
-          <div className="relative w-full h-[300px] md:h-[400px]">
+        {/* INTEGRATION 2: CULTURAL BANNER - Full Width Image After 2 Sections */}
+        <section className="relative w-screen max-w-full m-0 p-0 left-[50%] -translate-x-[50%] overflow-hidden">
+          <div className="relative w-full">
             <Image
               src="/images/collage-cultural-banner.png"
               alt="Culture Ghriba - Tanger Heritage"
-              fill
-              className="object-cover object-center"
+              width={3840} // Explicit 4K width to help layout
+              height={1080}
+              quality={100}
+              unoptimized // Force original quality
+              className="w-full h-auto object-cover block" // block prevents descender gaps
+              priority
             />
             {/* Subtle overlay to blend with site palette */}
-            <div className="absolute inset-0 bg-[#F5F0E6]/10 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-[#F5F0E6]/10 mix-blend-multiply pointer-events-none" />
           </div>
         </section>
 

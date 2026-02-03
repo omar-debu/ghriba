@@ -25,40 +25,40 @@ export default function MiFatima() {
             HERO: THE PORTRAIT
            --------------------------------------------------------- */}
                 {/* Adjusted padding: pb-0 */}
-                <section className="relative h-screen flex items-center px-6 md:px-12 overflow-hidden pb-32">
+                <section className="relative min-h-screen flex items-center px-4 md:px-12 overflow-hidden pb-16 md:pb-32 pt-20 md:pt-0">
                     <div className="absolute inset-x-0 top-0 h-[50vh] bg-gradient-to-b from-black/60 to-transparent z-10" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 w-full relative z-20 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 w-full relative z-20 items-center gap-8">
 
                         {/* Text Block */}
-                        <div className="lg:col-span-7 relative z-30 lg:-mr-24 mb-12 lg:mb-0">
+                        <div className="lg:col-span-7 relative z-30 lg:-mr-24 mb-8 lg:mb-0 order-2 lg:order-1">
                             <motion.div
                                 initial={{ width: 0 }}
                                 animate={{ width: "100px" }}
                                 transition={{ duration: 1.5 }}
-                                className="h-2 bg-[#8B2E24] mb-8"
+                                className="h-1.5 md:h-2 bg-[#8B2E24] mb-4 md:mb-8"
                             />
                             <motion.h1
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
-                                className="font-mega text-7xl md:text-[10rem] text-[#E7D2A9] leading-[0.8]"
+                                className="font-mega text-5xl sm:text-6xl md:text-[10rem] text-[#E7D2A9] leading-[0.8]"
                             >
                                 MI<br />FATIMA
                             </motion.h1>
-                            <div className="mt-8 bg-[#3E2b26]/90 backdrop-blur-sm p-6 border-l-4 border-[#E7D2A9] max-w-xl shadow-2xl">
-                                <p className="font-serif text-2xl italic text-white/90 leading-relaxed">
+                            <div className="mt-4 md:mt-8 bg-[#3E2b26]/90 backdrop-blur-sm p-4 md:p-6 border-l-4 border-[#E7D2A9] max-w-xl shadow-2xl">
+                                <p className="font-serif text-lg md:text-2xl italic text-white/90 leading-relaxed">
                                     "73 ans. 50 ans de patience. Des mains qui ont façonné l'histoire d'une famille, une ghriba à la fois."
                                 </p>
                             </div>
                         </div>
 
                         {/* Image Block */}
-                        <div className="lg:col-span-5 relative h-[70vh] w-full rotate-3 hover:rotate-0 transition-transform duration-1000 origin-center">
-                            <div className="absolute inset-0 bg-[#E7D2A9] transform translate-x-4 translate-y-4">
+                        <div className="lg:col-span-5 relative h-[40vh] md:h-[70vh] w-full rotate-1 md:rotate-3 hover:rotate-0 transition-transform duration-1000 origin-center order-1 lg:order-2">
+                            <div className="absolute inset-0 bg-[#E7D2A9] transform translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4">
                                 <div className="bg-berber-diamond w-full h-full opacity-20" />
                             </div>
-                            <div className="relative h-full w-full grayscale contrast-125 border-4 border-[#F5F0E6] shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
+                            <div className="relative h-full w-full grayscale contrast-125 border-2 md:border-4 border-[#F5F0E6] shadow-[0_30px_60px_rgba(0,0,0,0.5)]">
                                 <Image src="/images/sketch-smile.jpg" alt="Portrait" fill className="object-cover" priority />
                             </div>
                         </div>
@@ -75,19 +75,19 @@ export default function MiFatima() {
 
                         {/* CONTAINER FOR LOCKED ALIGNMENT */}
                         <div className="relative inline-block w-full">
-                            {/* 1974 */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] text-[150px] text-[#3E2b26]/5 font-mega leading-none select-none z-0">
+                            {/* 1974 - Hidden on mobile */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] text-[80px] md:text-[150px] text-[#3E2b26]/5 font-mega leading-none select-none z-0 hidden sm:block">
                                 1974
                             </div>
 
                             {/* Quote Image */}
                             <div className="relative z-10 flex justify-center transform hover:scale-105 transition-transform duration-700">
-                                <Image src="/images/quote-dignity.png" alt="Quote" width={750} height={300} className="object-contain drop-shadow-xl" />
+                                <Image src="/images/quote-dignity.png" alt="Quote" width={750} height={300} className="object-contain drop-shadow-xl w-full max-w-[90vw] md:max-w-none" />
                             </div>
                         </div>
 
                         {/* French Quote */}
-                        <p className="font-serif text-2xl italic text-[#8B2E24] max-w-2xl mx-auto bg-[#F5F0E6]/80 px-8 py-4 backdrop-blur-sm rounded-organic shadow-sm relative z-20 mt-8">
+                        <p className="font-serif text-lg md:text-2xl italic text-[#8B2E24] max-w-2xl mx-auto bg-[#F5F0E6]/80 px-4 md:px-8 py-3 md:py-4 backdrop-blur-sm rounded-organic shadow-sm relative z-20 mt-4 md:mt-8">
                             "Une nécessité devenue un art. Une survie devenue une légende."
                         </p>
 
@@ -115,23 +115,23 @@ export default function MiFatima() {
 
                 {/* CHAPTER 1: COLLABORATION */}
                 {/* Ensure no top margin overlap conflicts with SVG */}
-                <section className="py-24 bg-[#E7D2A9] relative z-20 overflow-visible mt-0">
+                <section className="py-12 md:py-24 bg-[#E7D2A9] relative z-20 overflow-visible mt-0">
                     <div className="absolute inset-0 bg-berber-cross opacity-10 mix-blend-multiply" />
 
-                    <div className="max-w-6xl mx-auto px-6 relative pt-0">
+                    <div className="max-w-6xl mx-auto px-4 md:px-6 relative pt-0">
                         {/* Visual Anchor */}
-                        <div className="relative w-full md:w-2/3 h-[500px] md:h-[600px] shadow-2xl border-8 border-white rotate-1 z-10">
+                        <div className="relative w-full md:w-2/3 h-[300px] md:h-[600px] shadow-2xl border-4 md:border-8 border-white rotate-0 md:rotate-1 z-10">
                             <Image src="/images/sketch-collaboration.jpg" alt="Collaboration" fill className="object-cover grayscale" />
                         </div>
 
                         {/* Text Overlay Card */}
-                        <div className="relative md:absolute md:top-20 md:right-0 md:w-1/2 bg-[#F5F0E6] p-8 md:p-12 shadow-collage -rotate-1 z-20 border-l-8 border-[#3E2b26]">
-                            <div className="absolute -top-6 -left-6 bg-[#8B2E24] text-[#E7D2A9] px-6 py-2 font-mega text-2xl shadow-lg">LE DUO</div>
-                            <h2 className="font-heading text-4xl mb-6 text-[#3E2b26]">La Main et la Parole</h2>
-                            <p className="font-serif text-lg leading-relaxed text-[#3E2b26]/90 mb-4 text-justify">
+                        <div className="relative md:absolute md:top-20 md:right-0 md:w-1/2 bg-[#F5F0E6] p-6 md:p-12 shadow-collage rotate-0 md:-rotate-1 z-20 border-l-4 md:border-l-8 border-[#3E2b26] mt-6 md:mt-0">
+                            <div className="absolute -top-4 md:-top-6 left-4 md:-left-6 bg-[#8B2E24] text-[#E7D2A9] px-4 md:px-6 py-1.5 md:py-2 font-mega text-lg md:text-2xl shadow-lg">LE DUO</div>
+                            <h2 className="font-heading text-2xl md:text-4xl mb-4 md:mb-6 text-[#3E2b26] mt-4 md:mt-0">La Main et la Parole</h2>
+                            <p className="font-serif text-base md:text-lg leading-relaxed text-[#3E2b26]/90 mb-3 md:mb-4">
                                 Pendant des décennies, ils formaient un seul corps. Lui s'occupait de la vente, portant les plateaux à travers les ruelles de Tanger, tandis qu'elle orchestrait la magie dans la cuisine.
                             </p>
-                            <p className="font-serif text-lg leading-relaxed text-[#3E2b26]/90 text-justify">
+                            <p className="font-serif text-base md:text-lg leading-relaxed text-[#3E2b26]/90">
                                 Aujourd'hui, une douleur lancinante aux pieds a forcé son mari à s'arrêter. Il regarde désormais ces gestes qu'il connaît par cœur, impuissant mais admiratif.
                             </p>
                         </div>
@@ -139,23 +139,23 @@ export default function MiFatima() {
                 </section>
 
                 {/* CHAPTER 2: STRUGGLE */}
-                <section className="py-32 bg-[#3E2b26] relative z-20 overflow-hidden">
+                <section className="py-16 md:py-32 bg-[#3E2b26] relative z-20 overflow-hidden">
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-berber-diamond opacity-5" />
 
-                    <div className="max-w-6xl mx-auto px-6 relative flex flex-col md:flex-row items-center justify-end">
+                    <div className="max-w-6xl mx-auto px-4 md:px-6 relative flex flex-col md:flex-row items-center justify-end gap-6">
 
-                        <div className="order-2 md:order-1 relative md:absolute md:left-0 md:top-32 md:w-1/2 bg-[#4E342E] p-8 md:p-12 shadow-2xl rotate-1 z-30 border-r-8 border-[#E7D2A9]">
-                            <div className="absolute -top-6 -right-6 bg-[#E7D2A9] text-[#3E2b26] px-6 py-2 font-mega text-2xl shadow-lg">LE LABEUR</div>
-                            <h2 className="font-heading text-4xl mb-6 text-[#E7D2A9]">L'Épreuve Quotidienne</h2>
-                            <p className="font-serif text-lg leading-relaxed text-[#F5F0E6]/90 mb-4 text-justify">
+                        <div className="order-2 md:order-1 relative md:absolute md:left-0 md:top-32 md:w-1/2 bg-[#4E342E] p-6 md:p-12 shadow-2xl rotate-0 md:rotate-1 z-30 border-l-4 md:border-r-8 md:border-l-0 border-[#E7D2A9]">
+                            <div className="absolute -top-4 md:-top-6 right-4 md:-right-6 bg-[#E7D2A9] text-[#3E2b26] px-4 md:px-6 py-1.5 md:py-2 font-mega text-lg md:text-2xl shadow-lg">LE LABEUR</div>
+                            <h2 className="font-heading text-2xl md:text-4xl mb-4 md:mb-6 text-[#E7D2A9] mt-4 md:mt-0">L'Épreuve Quotidienne</h2>
+                            <p className="font-serif text-base md:text-lg leading-relaxed text-[#F5F0E6]/90 mb-3 md:mb-4">
                                 Le loyer augmente, les factures s'accumulent. Leur fils, chauffeur de taxi, lutte aussi contre la ville. C'est un combat invisible qui se joue derrière chaque porte de la médina.
                             </p>
-                            <blockquote className="border-l-4 border-[#8B2E24] pl-4 italic text-[#E7D2A9] text-xl">
+                            <blockquote className="border-l-4 border-[#8B2E24] pl-4 italic text-[#E7D2A9] text-lg md:text-xl">
                                 "Je rêve juste d'un toit stable. De fermer les yeux sans la peur du lendemain."
                             </blockquote>
                         </div>
 
-                        <div className="order-1 md:order-2 relative w-full md:w-2/3 h-[500px] md:h-[600px] shadow-2xl border-8 border-white/10 -rotate-1 z-10">
+                        <div className="order-1 md:order-2 relative w-full md:w-2/3 h-[300px] md:h-[600px] shadow-2xl border-4 md:border-8 border-white/10 rotate-0 md:-rotate-1 z-10">
                             <Image src="/images/sketch-stairs.jpg" alt="Struggle" fill className="object-cover grayscale contrast-125" />
                             <div className="absolute inset-0 bg-[#3E2b26]/20 mix-blend-multiply" />
                         </div>

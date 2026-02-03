@@ -14,15 +14,14 @@ export default function Histoire() {
                 <div className="absolute inset-0 pattern-tattoo-overlay opacity-5 mix-blend-multiply" />
             </div>
 
-            <main className="pt-32 relative z-10">
+            <main className="pt-20 md:pt-32 relative z-10">
 
                 {/* HEADER - CLEAN BOOK DISPLAY */}
-                <section className="relative h-[60vh] flex items-center justify-center px-6">
+                <section className="relative h-[40vh] md:h-[60vh] flex items-center justify-center px-4 md:px-6">
                     {/* No Dark Background/Overlay - Pure Transparency over global textures */}
 
-                    {/* MOROCCAN ARCH SILHOUETTE - "Magical Touch" */}
-                    {/* Fits storytelling: "Moroccan architectural silhouettes, calm, heritage" */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                    {/* MOROCCAN ARCH SILHOUETTE - "Magical Touch" - Hidden on mobile */}
+                    <div className="absolute inset-0 hidden md:flex items-center justify-center pointer-events-none z-0">
                         <svg viewBox="0 0 200 300" className="w-full h-full max-w-md max-h-[80vh] fill-[#3E2b26] opacity-[0.03]">
                             <path d="M100 0 C 60 0 40 40 40 70 V 300 H 160 V 70 C 160 40 140 0 100 0 Z" />
                         </svg>
@@ -33,7 +32,7 @@ export default function Histoire() {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.5, ease: "easeOut" }}
-                        className="relative z-10 w-full max-w-sm aspect-[3/4] flex items-center justify-center"
+                        className="relative z-10 w-full max-w-[200px] md:max-w-sm aspect-[3/4] flex items-center justify-center"
                     >
                         {/* Book Image */}
                         <Image
@@ -47,19 +46,19 @@ export default function Histoire() {
 
 
                 {/* VIDEO SECTION - Clear & Visible to All Visitors */}
-                <section className="relative py-16 bg-[#3E2b26]">
+                <section className="relative py-10 md:py-16 bg-[#3E2b26]">
                     {/* Decorative Pattern */}
                     <div className="absolute inset-0 bg-berber-diamond opacity-10" />
 
-                    <div className="max-w-5xl mx-auto px-6 relative z-10">
+                    <div className="max-w-5xl mx-auto px-4 md:px-6 relative z-10">
                         {/* Section Title */}
-                        <div className="text-center mb-10">
-                            <h2 className="font-heading text-3xl md:text-4xl text-[#E7D2A9] mb-3">Notre Histoire en Images</h2>
-                            <p className="font-serif text-lg text-[#E7D2A9]/70 italic">Un voyage au cœur de la tradition Ghriba</p>
+                        <div className="text-center mb-6 md:mb-10">
+                            <h2 className="font-heading text-2xl md:text-4xl text-[#E7D2A9] mb-2 md:mb-3">Notre Histoire en Images</h2>
+                            <p className="font-serif text-base md:text-lg text-[#E7D2A9]/70 italic">Un voyage au cœur de la tradition Ghriba</p>
                         </div>
 
                         {/* Video Player - Cinema Style */}
-                        <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl border-4 border-[#E7D2A9]/20">
+                        <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl border-2 md:border-4 border-[#E7D2A9]/20">
                             <video
                                 autoPlay
                                 loop
@@ -132,7 +131,7 @@ export default function Histoire() {
                     <div className="relative">
                         <div className="absolute bottom-0 left-0 w-full h-96 bg-berber-zigzag opacity-10 -z-10" />
                         <CollageSection
-                            mainImage="/images/collage-botanical.jpg"
+                            mainImage="/images/collage-secrets-famille.png"
                             title="Secrets de Famille"
                             description="Le dosage est un mystère gardé dans le carnet de Mi Fatima. Une pincée de gomme arabique, une note de cannelle... L'équilibre parfait entre la terre et le ciel."
                             arabicAnnotation="سِرّ"
